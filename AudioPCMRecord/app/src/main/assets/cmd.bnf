@@ -1,0 +1,10 @@
+#BNF+IAT 1.0 UTF-8;
+!grammar call;
+!slot <PreText>;
+!slot <ModelType>;
+!start <acStart>;
+
+<acStart>:<Model>;
+<PreText>:请|我想|执行;
+<Model>:[<PreText>]<ModelType>;
+<ModelType>:注册!id(100)|认证!id(101)|重新注册!id(102)|删除注册!id(103);
